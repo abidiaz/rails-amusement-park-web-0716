@@ -19,11 +19,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <a class="navbar-brand" href="<%= root_url_path %>"/>Home</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
            <!--  nav here -->
+           <% if logged_in? %>
+           <li><%= link_to "Hello, #{current_user.name}!!!", user_path(current_user) %></li>
+           <li><%= link_to "Log Out", logout_path %></li>
+           <% end %>
+
+
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

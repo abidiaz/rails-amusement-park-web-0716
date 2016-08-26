@@ -1,0 +1,31 @@
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :height %>
+  <%= f.text_field :height %>
+  <br>
+  <%= f.label :happiness, "How happy are you? (1-5 scale)" %>
+  <%= f.text_field :happiness %>
+  <br>
+  <%= f.label :nausea, "How nauseous are you? (1-5 scale)" %>
+  <%= f.text_field :nausea %>
+  <br>
+  <%= f.label :tickets, "How many dollars are in your pocket?" %>
+  <%= f.text_field :tickets %>
+  <br>
+  <%= f.label :admin, "Check box if you are a theme park owner" %>
+  <%= f.check_box :admin %>
+  <br>
+  <%= f.label :password, "Create a password! Must include at least one disney character:" %>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation, "Confirm your disney character:" %>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.label :pic, "Optional Pic:" %>
+  <%= f.text_field :pic %>
+  <br>
+  <%= f.submit %>
+<% end %>
